@@ -63,9 +63,27 @@ body {
 
 .container {
   display: block;
-  width: 1200px;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
@@ -76,11 +94,11 @@ body {
 .section-title {
   display: block;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.67;
+  font-size: 28px;
+  line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .desc {
@@ -96,6 +114,12 @@ body {
 .desc--appeal {
   color: var(--second-color);
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .desc {
+    text-align: center;
+  }
 }
 
 .logo {
@@ -124,7 +148,7 @@ body {
 
 .social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .social-list--cards {

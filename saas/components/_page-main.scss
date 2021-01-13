@@ -1,6 +1,6 @@
 .main {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__icon {
     display: flex;
@@ -12,7 +12,7 @@
 
   &__cover {
     display: flex;
-    width: 270px;
+    width: 450px;
     height: 120px;
     justify-content: center;
     align-items: center;
@@ -29,17 +29,17 @@
     color: var(--third-color);
   }
 
-  &__list {
+  /* &__list {
     display: flex;
     justify-content: space-between;
-  }
+  }*/
 
   &__item {
     display: block;
-    width: 270px;
+    width: 450px;
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-bottom: 30px;
     }
   }
 }

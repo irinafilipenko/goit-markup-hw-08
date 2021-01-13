@@ -2,12 +2,12 @@
   border-bottom: 1px solid #ececec;
   max-width: 1600px;
   margin: 0 auto;
-}
 
-&__container,
-.navigation {
-  display: flex;
-  align-items: center;
+  &__container,
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .navigation__link {

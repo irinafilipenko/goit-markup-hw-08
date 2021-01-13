@@ -33,12 +33,6 @@ body {
   font-family: var(--main-font);
 }
 
-@media screen and (min-width: 900px) {
-  body {
-    background-color: aqua;
-  }
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;

@@ -1,6 +1,10 @@
 .galery {
   padding-bottom: 94px;
 
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+
   &__img {
     display: block;
   }
