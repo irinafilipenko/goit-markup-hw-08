@@ -3,11 +3,14 @@
 }
 
 .footer {
-  max-width: 1600px;
-  margin: 0 auto;
+  text-align: center;
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  &__list {
+    margin-bottom: 60px;
+  }
 
   &__link {
     font-weight: 400;
@@ -22,15 +25,15 @@
     }
   }
 
-  &__section {
+  /* &__section {
     display: flex;
     align-items: baseline;
-  }
+  } 
 
   &__container {
     margin-right: 70px;
     width: 231px;
-  }
+  }*/
 
   &__item:not(:last-child) {
     display: block;

@@ -18,14 +18,14 @@
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &-title {
     display: block;
     font-weight: 700;
     font-size: 28px;
-    line-height: 1.19;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
@@ -46,7 +46,7 @@
     margin-bottom: 20px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
 }

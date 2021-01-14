@@ -1,7 +1,7 @@
 .button-list {
   display: flex;
-  margin-bottom: 56px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 
   &__modal-btn {
     display: block;
@@ -32,5 +32,10 @@
   &__item:not(:last-child) {
     display: block;
     margin-right: 8px;
+  }
+
+  &__item:nth-child(-n + 3) {
+    display: block;
+    margin-bottom: 15px;
   }
 }
