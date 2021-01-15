@@ -25,19 +25,25 @@
 
               <button 
               type="button" 
-              class="menu__button" 
+              class="menu-button" 
               aria-expanded="false"
-               aria-controls="navigation">
-                <svg class="menu__button--icon" width="40" height="40" aria-label="Переключатель мобильного меню">
-                  <use class="icon-close" href="./images/sprite.svg#icon-close_40px"></use>
-                  <use class="icon-menu" href="./images/sprite.svg#icon-menu_40px"></use>
+               aria-controls="menu-container"
+               data-menu-button>
+                <svg class="menu-button--icon" width="40" height="40" 
+                aria-label="Переключатель мобильного меню">
+                  <use class="icon-cross" 
+                  href="./images/sprite.svg#icon-close_40px"></use>
+                  <use class="icon-menu"
+                   href="./images/sprite.svg#icon-menu_40px"></use>
                 </svg>
               </button>
           </div>
           
          
-         <!----   <nav class="navigation">
-              
+          <nav class="navigation"
+                id="menu-container"
+                data-menu >
+                    
               <ul class="navigation__list">
                 <li class="navigation__item">
                   <a class="navigation__link " href="./index.html"> Студия</a>
@@ -70,7 +76,7 @@
                 </li>
               </ul>
             </address>
-         </nav>!-->
+         </nav>
          
       </div>
     </header>
@@ -351,7 +357,7 @@
       </footer>
     
     
-
+<script src="./js/modal.js"></script>
   
 </body>
 </html>
