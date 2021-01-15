@@ -6,6 +6,10 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
 
+  @media screen and (min-width: 768px) {
+    margin-right: 94px;
+  }
+
   &__firsttext {
     color: var(--accent-color);
   }

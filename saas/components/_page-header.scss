@@ -13,32 +13,56 @@
     padding-top: 16px;
     padding-bottom: 16px;
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+
+      align-items: center;
+    }
   }
 }
 
-.navigation {
+@media screen and (max-width: 767px) {
+  .navigation {
     display: none;
-  position: absolute;
-  z-index: 100
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--second-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
-  border-top: 1px solid #ececec;
-  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--second-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: 1px solid #ececec;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &.is-open {
-    display: block;
+    &.is-open {
+      display: block;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      margin-bottom: 60px;
+    }
   }
+}
 
-  &__item:not(:last-child) {
-    margin-bottom: 40px;
-  }
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
 
-  &__list {
-    margin-bottom: 60px;
+    &__list {
+      display: flex;
+      align-items: center;
+      margin-right: 84px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -46,6 +70,17 @@
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &--current {
     color: var(--accent-color);
@@ -65,15 +100,6 @@
   }
 }
 
-.navigation__link,
-.address__link {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: #212121;
-}
-
 .navigation__link:hover,
 .address__link:hover,
 .navigation__link:focus {
@@ -83,6 +109,11 @@
 .address {
   margin-right: auto;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__icon {
     display: block;
     margin-right: 10px;
@@ -91,14 +122,27 @@
 
   &__item:not(:last-child) {
     margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
     color: var(--third-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: 1.67;
+    }
   }
 }
 
@@ -128,6 +172,10 @@
   }
 
   &.is-open .icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
