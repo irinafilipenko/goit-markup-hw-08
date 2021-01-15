@@ -5,18 +5,28 @@
   margin-bottom: 30px;
 
   &__text {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.67;
     letter-spacing: 0.03em;
     color: var(--third-color);
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   &__link {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.67;
     letter-spacing: 0.03em;
     text-decoration: underline;
     color: var(--accent-color);
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   &__label {
