@@ -46,6 +46,38 @@
     display: flex;
     justify-content: space-around;
   }
+
+  .form__label {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: left;
+
+    &__section {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    &--tablet {
+      align-items: baseline;
+    }
+
+    &__container {
+      margin-right: 70px;
+    }
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /* &__section {

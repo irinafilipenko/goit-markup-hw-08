@@ -26,3 +26,15 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .form__label {
+    display: flex;
+  }
+
+  .form__input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
