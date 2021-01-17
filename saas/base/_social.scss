@@ -9,10 +9,12 @@
 
 .social {
   display: block;
-  width: 206px;
-  height: 80px;
   margin: 0 auto;
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 
   &__item:not(:last-child) {
     margin-right: 10px;
