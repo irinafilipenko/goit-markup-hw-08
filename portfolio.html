@@ -57,11 +57,11 @@
                 </li>
               </ul>
             
-            <address class="address">
-              <ul class="address__list">
+           
+              <ul class="address">
                 <li class="address__item">
                   <a class="address__link" href="mailto:info@devstudio.com">
-                    <svg class="address__icon" width="16" height="12">
+                    <svg class="address__icon address__icon--envelope" width="16" height="12">
                       <use href="./images/sprite.svg#icon-envelope"></use>
                     </svg>
                     info@devstudio.com
@@ -69,14 +69,14 @@
                 </li>
                 <li class="address__item">
                   <a class="address__link" href="tel:+380961111111">
-                    <svg class="address__icon" width="10" height="16">
+                    <svg class="address__icon address__icon--smartphone" width="10" height="16">
                       <use href="./images/sprite.svg#icon-smartphone"></use>
                     </svg>
                     +38 096 111 11 11
                   </a>
                 </li>
               </ul>
-            </address>
+            
          </nav>
          
       </div>
@@ -143,7 +143,7 @@
                             <picture class="product__picture">
                                   <source srcset="./images/Device/img22.jpg 1x, ./images/Device/img22-d2x.jpg 2x" media="(min-width: 1200px)">
                                 
-                                  <source srcset="/images/Device/img22-t1x.jpg 1x, ./images/Device/img22-t2x.jpg 2x" media="(min-width: 768px)">
+                                  <source srcset="/images/Device/img22-t1x.jpg 1x, /images/Device/img22-2x.jpg 2x" media="(min-width: 768px)">
                                 
                                   <source srcset="./images/Device/img22-1х.jpg 1x, ./images/Device/img22-2х.jpg 2x" media="(min-width: 320px)">
                                 
@@ -318,9 +318,15 @@
                 <li class="device-list__item">
                    <a class="device-list__link" href="#">
                       <div class="product">
-                         <img class="product__img" src="./images/minileptop.jpg"
-                            alt="Пользователь использует приложение на девайсе" 
-                            width="450" height="294"> 
+                        <picture class="product__picture">
+                          <source srcset="./images/Device/img99.jpg 1x, ./images/Device/img99-d2x.jpg 2x" media="(min-width: 1200px)">
+                        
+                          <source srcset="/images/Device/img99-t1x.jpg 1x, ./images/Device/img99-t2x.jpg 2x" media="(min-width: 768px)">
+                        
+                          <source srcset="./images/Device/img99-1х.jpg 1x, ./images/Device/img99-2х.jpg 2x" media="(min-width: 320px)">
+                         <img class="product__img" src="./images/Device/img99-1х.jpg"
+                            alt="Пользователь использует приложение на девайсе" >
+                        </picture>
                          <p class="product__text">
                             Технокряк это современная площадка распространения коронавируса.
                             Компании используют эту платформу для цифрового
