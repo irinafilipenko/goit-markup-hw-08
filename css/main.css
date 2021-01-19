@@ -71,19 +71,19 @@ body {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -135,14 +135,22 @@ body {
   text-decoration: none;
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 768px) {
   .logo {
-    margin-right: 94px;
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
   }
 }
 
@@ -257,52 +265,6 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .header__container {
-    display: flex;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .navigation {
-    display: none;
-    position: absolute;
-    z-index: 100;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--second-color);
-    padding-top: 60px;
-    padding-bottom: 60px;
-    border-top: 1px solid #ececec;
-    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .navigation.is-open {
-    display: block;
-  }
-  .navigation__item:not(:last-child) {
-    margin-bottom: 40px;
-  }
-  .navigation__list {
-    margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navigation {
-    display: flex;
-  }
-  .navigation__list {
-    display: flex;
-    align-items: center;
-    margin-right: 84px;
-  }
-  .navigation__item:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-
 .navigation__link {
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -312,14 +274,6 @@ body {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #212121;
-}
-
-@media screen and (min-width: 768px) {
-  .navigation__link {
-    padding: 32px 0;
-    font-size: 14px;
-    line-height: 1.14;
-  }
 }
 
 .navigation__link--current {
@@ -339,9 +293,9 @@ body {
   transform: translate(-50%);
 }
 
-.navigation__link:hover,
-.address__link:hover,
-.navigation__link:focus {
+.navigation__link .navigation__link:hover,
+.navigation__link .address__link:hover,
+.navigation__link .navigation__link:focus {
   color: var(--accent-color);
 }
 
@@ -349,27 +303,10 @@ body {
   margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
-  .address {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 .address__icon {
   display: block;
   margin-right: 10px;
   fill: currentColor;
-}
-
-.address__item:not(:last-child) {
-  margin-bottom: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .address__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
 }
 
 .address__link {
@@ -382,13 +319,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--third-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) {
-  .address__link {
-    font-size: 12px;
-    line-height: 1.67;
-  }
 }
 
 .menu-button {
@@ -421,9 +351,100 @@ body {
   display: none;
 }
 
+.navigation.is-open {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navigation {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--second-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: 1px solid #ececec;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation.is-open {
+    display: block;
+  }
+  .navigation__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .navigation__list {
+    margin-bottom: 60px;
+  }
+  .address__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+  }
+  .navigation {
+    display: flex;
+  }
+  .navigation__list {
+    display: flex;
+    align-items: center;
+    margin-right: 84px;
+  }
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .navigation__link {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  .address {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .address__link {
+    font-size: 12px;
+    line-height: 1.67;
+  }
   .menu-button {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address__icon--envelope {
+    width: 14px;
+    height: 10px;
+  }
+  .address__icon--smartphone {
+    height: 14px;
+  }
+  .address__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .navigation__list {
+    margin-right: 305px;
+  }
+  .address__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .navigation__link:hover,
+  .address__link:hover,
+  .navigation__link:focus {
+    color: var(--accent-color);
   }
 }
 
@@ -463,7 +484,7 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("././images/hero/Header-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Header-tablet@2x.jpg");
   }
 }
 
@@ -569,6 +590,8 @@ body {
 
 .galery__img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .galery__list {
@@ -630,7 +653,8 @@ body {
 
 .team__img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .team__item {
@@ -828,7 +852,7 @@ body {
   }*/
 .form__input {
   display: block;
-  width: 450px;
+  width: 100%;
   height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -855,6 +879,12 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 768px) {
+  .form__input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .form__label {
     display: flex;
@@ -876,7 +906,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
-  padding-top: 93px;
+  padding-top: 20%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -900,7 +930,6 @@ body {
 
 .modal {
   position: relative;
-  max-width: 528px;
   width: 100%;
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -909,12 +938,19 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .modal {
     position: absolute;
+    max-width: 450px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 481px) and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
   }
 }
 
@@ -942,6 +978,12 @@ body {
 
 .modal__close-button:hover .button__close-icon {
   fill: var(--accent-color);
+}
+
+@media screen and (max-width: 700px) and (min-width: 320px) and (orientation: landscape) {
+  .modal {
+    top: 90%;
+  }
 }
 
 .fieldset {
@@ -1000,6 +1042,13 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
+@media screen and (min-width: 1200px) {
+  .fieldset__placeholder::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 .fieldset__icon {
   position: absolute;
   display: block;
@@ -1034,7 +1083,7 @@ body {
   color: var(--third-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .checkbox__text {
     font-size: 14px;
     line-height: 1.71;
@@ -1049,7 +1098,7 @@ body {
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .checkbox__link {
     font-size: 14px;
     line-height: 1.71;

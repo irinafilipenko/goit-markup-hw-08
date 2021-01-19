@@ -21,6 +21,8 @@
 
   &__img {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   &__description {
@@ -52,5 +54,11 @@
     .device-list__link:hover & {
       transform: translateY(0);
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .product__description--tablet {
+    padding-bottom: 56px;
   }
 }

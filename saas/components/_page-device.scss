@@ -11,9 +11,29 @@
         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
   }
-
-  &__item:not(:last-child) {
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .device-list__item:not(:last-child) {
     margin-bottom: 30px;
     cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .device-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    &__item {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .device-list__item {
+    width: calc((100% - 3 * 30px) / 3);
   }
 }
